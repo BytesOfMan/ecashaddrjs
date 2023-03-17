@@ -18,7 +18,7 @@ $ npm install --save ecashaddrjs
 
 ### Manually
 
-You may also download the distribution file manually and place it within your third-party scripts directory: [dist/cashaddrjs-1.0.6.min.js](https://unpkg.com/ecashaddrjs@1.0.6/dist/cashaddrjs-1.0.6.min.js).
+You may also download the distribution file manually and place it within your third-party scripts directory: [dist/cashaddrjs-1.0.7.min.js](https://unpkg.com/ecashaddrjs@1.0.7/dist/cashaddrjs-1.0.7.min.js).
 
 ## Usage
 
@@ -33,7 +33,7 @@ const { prefix, type, hash } = ecashaddr.decode(bitcoincashAddress);
 console.log(prefix); // 'bitcoincash'
 console.log(type); // 'P2PKH'
 console.log(hash); // Uint8Array [ 118, 160, ..., 115 ]
-console.log(cashaddr.encode('ecash', type, hash)); 
+console.log(ecashaddr.encode('ecash', type, hash)); 
 // 'ecash:qpadrekpz6gjd8w0zfedmtqyld0r2j4qmuthccqd8d'
 ```
 
@@ -58,7 +58,7 @@ function convertBitcoincashToEcash(bitcoincashAddress) {
 ```html
 <html>
   <head>    
-    <script src="https://unpkg.com/ecashaddrjs@1.0.6/dist/cashaddrjs-1.0.6.min.js"></script>
+    <script src="https://unpkg.com/ecashaddrjs@1.0.7/dist/cashaddrjs-1.0.7.min.js"></script>
   </head>
   <body>
   <script>
@@ -89,7 +89,7 @@ You may include a script tag in your HTML and the `ecashaddr` module will be def
 <html>
   <head>
     ...
-    <script src="https://unpkg.com/ecashaddrjs@1.0.6/dist/cashaddrjs-1.0.6.min.js"></script>
+    <script src="https://unpkg.com/ecashaddrjs@1.0.7/dist/cashaddrjs-1.0.7.min.js"></script>
   </head>
   ...
 </html>
@@ -98,3 +98,7 @@ You may include a script tag in your HTML and the `ecashaddr` module will be def
 #### jsFiddle
 
 https://jsfiddle.net/zghd6c2y/
+
+#### Change Log
+
+Aug 4, 2021 - Added support for `ectest:` prefix
